@@ -2,7 +2,9 @@
     {{- $params := .Scratch.Get "params" -}}
     {{- $profile := .Site.Params.home.profile -}}
     {{- $posts := .Site.Params.home.posts -}}
-
+    <div>
+        <a href="/.auth/login/aad">Login</a> | <a href="/.auth/logout">Logout</a>
+    </div>
     <div class="page home"{{ if ne $posts.enable false }} data-home="posts"{{ end }}>
         {{- /* Profile */ -}}
         {{- if ne $profile.enable false -}}
